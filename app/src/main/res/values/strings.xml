@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">UpdateR</string>
+    <string name="action_settings">Settings</string>
+    <string name="enter_task_here">Enter task here</string>
+</resources>

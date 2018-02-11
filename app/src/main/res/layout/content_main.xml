@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.example.shikh.updater.MainActivity"
+    tools:showIn="@layout/activity_main"
+    android:background="#e4e4e4">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#0070b3">
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="18"
+            android:layout_margin="25dp"
+            android:layout_gravity="center"
+            android:background="#FFFFFF"
+            android:hint="@string/enter_task_here"
+            android:padding="10dp"
+            android:textSize="20sp"
+            />
+    </FrameLayout>
+
+</FrameLayout>
