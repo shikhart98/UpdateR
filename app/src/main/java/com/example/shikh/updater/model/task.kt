@@ -5,5 +5,6 @@ package com.example.shikh.updater.model
  */
 data class task(
         val task_name: String,
-        val task_done: Boolean
+        val task_done: Boolean,
+        val task_date: String
 )
