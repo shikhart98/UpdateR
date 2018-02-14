@@ -1,9 +1,139 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.shikh.updater.LoginActivity">
+    android:orientation="vertical"
+    tools:context="com.example.shikh.updater.SignUpActivity">
 
-</android.support.constraint.ConstraintLayout>
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:background="#01579a">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/newicon"
+            android:layout_gravity="center"
+            android:layout_marginBottom="50dp"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="UpdateR"
+            android:layout_gravity="center"
+            android:layout_marginTop="70dp"
+            android:textSize="80sp"
+            android:textColor="#FFFFFF"
+            android:fontFamily="cursive"/>
+
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        android:orientation="vertical">
+
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:elevation="20dp"
+            android:layout_margin="10dp"
+            app:cardCornerRadius="15dp"
+            >
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_gravity="center"
+                android:layout_margin="10dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Enter e-mail"
+                    android:textColor="#015799"
+                    android:textSize="20sp"
+                    android:layout_marginTop="10dp"
+                    android:layout_gravity="center"
+                    />
+
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ems="16"
+                    android:gravity="center"
+                    android:background="@android:color/transparent"
+                    android:hint="Enter E-mail here"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="20dp"
+                    android:inputType="textEmailAddress"
+                    android:layout_marginBottom="20dp"
+                    android:id="@+id/email_et_login"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Enter Password"
+                    android:textColor="#015799"
+                    android:textSize="20sp"
+                    android:layout_marginTop="10dp"
+                    android:layout_gravity="center"
+                    />
+
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ems="16"
+                    android:gravity="center"
+                    android:background="@android:color/transparent"
+                    android:hint="Enter password here"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="20dp"
+                    android:inputType="textPassword"
+                    android:layout_marginBottom="20dp"
+                    android:id="@+id/pass_et_login"
+                    />
+
+            </LinearLayout>
+
+
+        </android.support.v7.widget.CardView>
+
+        <ProgressBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/progressbarlogin"
+            android:layout_gravity="center"
+            android:visibility="gone" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#015799"
+            android:padding="10dp"
+            android:text="Login"
+            android:textColor="#FFFFFF"
+            android:layout_gravity="center"
+            android:layout_marginTop="5dp"
+            android:id="@+id/btn_login"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:text="Don't have an account? SignUp here!"
+            android:textColor="#015799"
+            android:id="@+id/tv_login"
+            android:textSize="15sp"/>
+    </LinearLayout>
+
+
+
+</LinearLayout>
