@@ -12,6 +12,7 @@ import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.shikh.updater.model.Session;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
@@ -25,19 +26,25 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
     Button btn_login;
     FirebaseAuth mAuth;
     ProgressBar progressBarlogin;
+    Session session;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
-
+        session = new Session(this);
         mAuth = FirebaseAuth.getInstance();
         email_et_login = findViewById(R.id.email_et_login);
         pass_et_login = findViewById(R.id.pass_et_login);
         tv_login = findViewById(R.id.tv_login);
         progressBarlogin = findViewById(R.id.progressbarlogin);
         btn_login = findViewById(R.id.btn_login);
+        if(session.loggedin()){
+            startActivity(new Intent(LoginActivity.this,MainActivity.class));
+            finish();
+        }
+
         findViewById(R.id.tv_login).setOnClickListener(this);
         findViewById(R.id.btn_login).setOnClickListener(this);
     }
@@ -87,6 +94,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
             public void onComplete(@NonNull Task<AuthResult> task) {
                 progressBarlogin.setVisibility(View.GONE);
                 if(task.isSuccessful()){
+                    session.setLoggedin(true);
                     Toast.makeText(getApplicationContext(),"You're successfully logged in",Toast.LENGTH_SHORT).show();
                     finish();
                 }else{
