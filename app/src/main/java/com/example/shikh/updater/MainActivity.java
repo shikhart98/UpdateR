@@ -9,7 +9,6 @@ import android.view.MenuItem;
 import android.view.SearchEvent;
 import android.view.View;
 import android.widget.EditText;
-
 import com.example.shikh.updater.model.Session;
 import com.melnykov.fab.FloatingActionButton;
 
@@ -22,7 +21,6 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
         session = new Session(this);
         if(!session.loggedin()){
             logout();
@@ -35,7 +33,6 @@ public class MainActivity extends AppCompatActivity {
                         .setAction("Action", null).show();
             }
         });
-
     }
 
     private void logout() {
