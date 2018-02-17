@@ -97,6 +97,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
                     session.setLoggedin(true);
                     Toast.makeText(getApplicationContext(),"You're successfully logged in",Toast.LENGTH_SHORT).show();
                     finish();
+                    startActivity(new Intent(LoginActivity.this,MainActivity.class));
                 }else{
                     Toast.makeText(getApplicationContext(), task.getException().getMessage(),Toast.LENGTH_SHORT).show();
                 }

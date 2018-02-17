@@ -11,6 +11,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
+import android.widget.ImageView;
+import android.widget.Toast;
 
 import com.example.shikh.updater.model.Session;
 import com.melnykov.fab.FloatingActionButton;
@@ -20,13 +22,14 @@ public class MainActivity extends AppCompatActivity {
     EditText et_main;
     Session session;
     ImageButton logouticon;
+    ImageView img_main;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         session = new Session(this);
-        logouticon = findViewById(R.id.logout_main);
+        img_main = findViewById(R.id.img_main);
         if(!session.loggedin()){
             logout();
         }
@@ -38,9 +41,10 @@ public class MainActivity extends AppCompatActivity {
                         .setAction("Action", null).show();
             }
         });
-        logouticon.setOnClickListener(new View.OnClickListener() {
+        img_main.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                Toast.makeText(getApplicationContext(),"You're successfully logged out!",Toast.LENGTH_SHORT).show();
                 logout();
             }
         });

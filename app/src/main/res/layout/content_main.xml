@@ -32,17 +32,14 @@
             android:fontFamily="cursive"
             android:text="@string/updater"
             android:textColor="#FFFFFF"
-            android:textSize="30sp" />
+            android:textSize="30sp"/>
 
-        <ImageButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/logout2"
             android:layout_gravity="right"
-            android:background="@null"
-            android:src="@drawable/logouticon"
-            android:id="@+id/logout_main"/>
-
-
+            android:id="@+id/img_main"/>
     </FrameLayout>
 
     <FrameLayout
