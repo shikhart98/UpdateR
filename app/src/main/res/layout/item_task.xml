@@ -17,6 +17,7 @@
             android:layout_margin="10dp"
             android:padding="10dp"
             android:hint="task"
+            android:id="@+id/tv_task"
             android:textSize="20sp"
             />
     </android.support.v7.widget.CardView>
