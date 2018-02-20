@@ -72,6 +72,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
             return;
         }
 
+//          check why this is not working!
 //        if(Patterns.EMAIL_ADDRESS.matcher(email).matches()){
 //            email_et_login.setError("Not valid Email");
 //            email_et_login.requestFocus();
