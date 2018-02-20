@@ -7,5 +7,6 @@ data class task(
         val task_userid: String,
         val task_name: String,
         val task_done: Boolean,
-        val task_date: String
+        val task_date: String,
+        val task_reminder: String
 )
