@@ -16,6 +16,7 @@ import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.example.shikh.updater.model.Session;
+import com.example.shikh.updater.model.task;
 import com.melnykov.fab.FloatingActionButton;
 
 public class MainActivity extends AppCompatActivity {
@@ -25,6 +26,7 @@ public class MainActivity extends AppCompatActivity {
     RecyclerView rv_task;
     ImageView img_main;
     taskadapter adapter;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
