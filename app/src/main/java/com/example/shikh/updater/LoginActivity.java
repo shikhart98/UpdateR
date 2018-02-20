@@ -84,7 +84,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
             pass_et_login.requestFocus();
             return;
         }
-// hello world
+
         if(password.length() < 6){
             pass_et_login.setError("Minimum length of password should be 6");
             pass_et_login.requestFocus();
