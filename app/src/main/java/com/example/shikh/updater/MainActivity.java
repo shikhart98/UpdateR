@@ -27,6 +27,9 @@ public class MainActivity extends AppCompatActivity {
     ImageView img_main;
     taskadapter adapter;
 
+//    1. Add firebase + Recycler View for the list to be displayed
+//    2. Add reminder feature..
+//    3. Put random theme to the inteface so that whenever user logs in or open the app, finds a different color the GUI.
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
