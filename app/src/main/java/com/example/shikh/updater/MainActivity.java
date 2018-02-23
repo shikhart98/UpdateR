@@ -30,8 +30,10 @@ public class MainActivity extends AppCompatActivity {
 //    TODOS:-
 //    1. Add firebase + Recycler View for the list to be displayed
 //    2. Add reminder feature..
-//    3. Put random theme to the inteface so that whenever user logs in or open the app, finds a different color the GUI.
-//    *Update this futher*
+//    3. Put random color theme to the interface so that whenever user logs in or open the app, finds a different color the GUI.
+//    4. Make a small widget.
+//    5. Make a notification widget for ease of referring.
+//    *Update this further *
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

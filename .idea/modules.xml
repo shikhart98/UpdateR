@@ -3,9 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/UpdateR.iml" filepath="$PROJECT_DIR$/UpdateR.iml" />
-      <module fileurl="file://C:\Users\shikh\UpdateR\UpdateR.iml" filepath="C:\Users\shikh\UpdateR\UpdateR.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
-      <module fileurl="file://C:\Users\shikh\UpdateR\app\app.iml" filepath="C:\Users\shikh\UpdateR\app\app.iml" />
     </modules>
   </component>
 </project>
