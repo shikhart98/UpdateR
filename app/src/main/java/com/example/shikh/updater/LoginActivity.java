@@ -67,6 +67,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         progressBarlogin.setVisibility(View.VISIBLE);
 
         if(email.isEmpty()){
+            progressBarlogin.setVisibility(View.GONE);
             email_et_login.setError("Email is required");
             email_et_login.requestFocus();
             return;
@@ -80,12 +81,14 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
 //        }
 
         if(password.isEmpty()){
+            progressBarlogin.setVisibility(View.GONE);
             pass_et_login.setError("Password is required");
             pass_et_login.requestFocus();
             return;
         }
 
         if(password.length() < 6){
+            progressBarlogin.setVisibility(View.GONE);
             pass_et_login.setError("Minimum length of password should be 6");
             pass_et_login.requestFocus();
             return;

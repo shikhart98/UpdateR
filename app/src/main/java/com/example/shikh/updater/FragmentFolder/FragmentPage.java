@@ -1,6 +1,6 @@
-package com.example.shikh.updater.Fragment;
+package com.example.shikh.updater.FragmentFolder;
 
-import android.app.Fragment;
+import android.support.v4.app.Fragment;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.view.LayoutInflater;
@@ -13,18 +13,16 @@ import com.example.shikh.updater.R;
  * Created by shikh on 21-03-2018.
  */
 
-public class PageFragment extends Fragment{
-
+public class FragmentPage extends Fragment {
     View view;
-    public PageFragment(){
 
+    public FragmentPage() {
     }
 
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, Bundle savedInstanceState) {
-        view = inflater.inflate(R.layout.diary_page,container,false);
+        view = inflater.inflate(R.layout.diary_page, container, false);
         return view;
     }
-
 }

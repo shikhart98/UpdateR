@@ -1,9 +1,8 @@
-package com.example.shikh.updater.Fragment;
+package com.example.shikh.updater.FragmentFolder;
 
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
-import android.widget.ListView;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -37,8 +36,8 @@ public class ViewPageAdapter extends FragmentPagerAdapter{
         return FragmentListTitles.size();
     }
 
-    public void AddFragment(Fragment fragment, String title){
-        fragmentList.add(fragment);
+    public void AddFragment(Fragment Fragment, String title){
+        fragmentList.add(Fragment);
         FragmentListTitles.add(title);
     }
 }

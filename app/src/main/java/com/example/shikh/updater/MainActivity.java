@@ -2,24 +2,20 @@ package com.example.shikh.updater;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.design.widget.Snackbar;
 import android.support.design.widget.TabLayout;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.RecyclerView;
-import android.view.Menu;
-import android.view.MenuItem;
-import android.view.SearchEvent;
 import android.view.View;
-import android.widget.Button;
 import android.widget.EditText;
-import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.Toast;
 
+import com.example.shikh.updater.FragmentFolder.FragmentPage;
+import com.example.shikh.updater.FragmentFolder.ViewPageAdapter;
 import com.example.shikh.updater.model.Session;
-import com.example.shikh.updater.model.task;
-import com.melnykov.fab.FloatingActionButton;
+
+import java.text.DateFormat;
+import java.util.Date;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -38,22 +34,28 @@ public class MainActivity extends AppCompatActivity {
         viewpager = findViewById(R.id.viewpager);
         tabbox = findViewById(R.id.tabbox);
 
-        if(!session.loggedin()){
+        if (!session.loggedin()) {
             logout();
         }
         img_main.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(getApplicationContext(),"You're successfully logged out!",Toast.LENGTH_SHORT).show();
+                Toast.makeText(getApplicationContext(), "You're successfully logged out!", Toast.LENGTH_SHORT).show();
                 logout();
             }
         });
-
+        ViewPageAdapter adapter = new ViewPageAdapter(getSupportFragmentManager());
+        String currentDateTimeString = DateFormat.getDateTimeInstance().format(new Date());
+        adapter.AddFragment(new FragmentPage(), currentDateTimeString);
+        adapter.AddFragment(new FragmentPage(),"2");
+        adapter.AddFragment(new FragmentPage(),"3");
+        viewpager.setAdapter(adapter);
+        tabbox.setupWithViewPager(viewpager);
     }
 
     private void logout() {
         session.setLoggedin(false);
         finish();
-        startActivity(new Intent(MainActivity.this,LoginActivity.class));
+        startActivity(new Intent(MainActivity.this, LoginActivity.class));
     }
 }
