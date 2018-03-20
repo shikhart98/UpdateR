@@ -40,7 +40,7 @@ public class taskadapter extends RecyclerView.Adapter<taskadapter.taskViewHolder
         }
 
         public void BindView(task task1){
-            tv_task.setText(task1.getTask_name());
+
         }
 
     }

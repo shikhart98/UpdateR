@@ -23,17 +23,7 @@ public class MainActivity extends AppCompatActivity {
 
     EditText et_main;
     Session session;
-    RecyclerView rv_task;
     ImageView img_main;
-    taskadapter adapter;
-
-//    TODOS:-
-//    1. Add firebase + Recycler View for the list to be displayed
-//    2. Add reminder feature..
-//    3. Put random color theme to the interface so that whenever user logs in or open the app, finds a different color the GUI.
-//    4. Make a small widget.
-//    5. Make a notification widget for ease of referring.
-//    *Update this further *
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,18 +31,9 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         session = new Session(this);
         img_main = findViewById(R.id.img_main);
-        adapter = new taskadapter();
         if(!session.loggedin()){
             logout();
         }
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Task Added!", Snackbar.LENGTH_SHORT)
-                        .setAction("Action", null).show();
-            }
-        });
         img_main.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
