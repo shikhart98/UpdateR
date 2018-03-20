@@ -3,6 +3,8 @@ package com.example.shikh.updater;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.Snackbar;
+import android.support.design.widget.TabLayout;
+import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.RecyclerView;
 import android.view.Menu;
@@ -24,6 +26,8 @@ public class MainActivity extends AppCompatActivity {
     EditText et_main;
     Session session;
     ImageView img_main;
+    ViewPager viewpager;
+    TabLayout tabbox;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,6 +35,9 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         session = new Session(this);
         img_main = findViewById(R.id.img_main);
+        viewpager = findViewById(R.id.viewpager);
+        tabbox = findViewById(R.id.tabbox);
+
         if(!session.loggedin()){
             logout();
         }
@@ -41,6 +48,7 @@ public class MainActivity extends AppCompatActivity {
                 logout();
             }
         });
+
     }
 
     private void logout() {
