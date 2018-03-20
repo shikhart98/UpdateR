@@ -14,19 +14,10 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:hint="Date"
-            android:id="@+id/diary_date"
-            android:textSize="20sp"
-            android:layout_margin="5dp"
-            />
         <EditText
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="15dp"
+            android:textSize="20dp"
             android:id="@+id/diary_content"
             android:hint="Write here"
             android:background="@android:color/transparent"
